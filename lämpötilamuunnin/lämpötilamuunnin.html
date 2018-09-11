@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>lämpötilamuunnin</title>
+</head>
+<body>
+    <h1>Lämpötilamuunnin</h1>
+    <p></p>
+
+    <select name="lampotila">
+        <option value="fahrenheit">Celcius->Fahrenheit</option>
+        <option value="kelvin">Celsius->Kelvin</option>
+    </select>
+
+    <p>Syötä lämpötila:</p>
+    <input type="text" id="lampoTila">
+    <button type="button" onclick="muunna()">Muunna</button>
+    
+    <p></p>
+    <input type="radio" value="1 desimaali">1 desimaali<br>
+    <input type="radio" value="2 desimaali">2 desimaali<br>
+    <input type="radio" value="3 desimaali">3 desimaali<br>
+
+    <p id="demo"></p>
+
+<script>
+
+var lampotilat = [];
+
+function muunna() {
+
+    var lampotila = document.getElementById("lampoTila").value;
+    lampotilat.push("lampotila");
+
+    tulostaLampotila();
+}
+
+function tulostaLampotila() {
+
+    var text = ("");
+    var i;
+    for (i = 0; i < lampotilat.lenght; i++) {
+        text += lampotilat[i] + "<br>";
+    }
+
+    document.getElementById("demo").innerHTML = text;
+}
+
+</script>
+
+</body>
+</html>
