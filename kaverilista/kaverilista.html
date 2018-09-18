@@ -4,15 +4,53 @@
         <title>Kaverilista</title>
     </head>
 <body>
+    <h1>Kaverilista</h1>
+    <p></p>
     <p>Syötä nimi:</p>
-    <input type="text"/>
+    <input type="text" id="uusiNimi">
         <button type="button" onclick="lisaaKaveri()">Lisää kaveri</button>
         <button type="button" onclick="jarjestaKaverit()">Järjestä kaverit</button>
         <button type="button" onclick="poistaKaveri()">Poista kaveri</button>
 
+    <p id="demo"></p>
+
 <script>
+
+var kaverit = [];
+
 function lisaaKaveri() {
+
+    var kaveri = document.getElementById("uusiNimi").value;
+    kaverit.push(kaveri);
+
+    tulostaKaverit();
+} 
+
+function tulostaKaverit(){
+
+    var text = "";
+    var i;
+    for (i = 0; i < kaverit.length; i++) {
+        text += kaverit[i] + "<br>";
+    }
+
+    document.getElementById("demo").innerHTML = text;
+}
+
+
+function jarjestaKaverit(){
    
+    kaverit.sort();
+    var text 
+
+    tulostaKaverit();
+}
+
+function poistaKaveri(){
+
+    kaverit.splice(0, 1);
+    
+    tulostaKaverit();
 }
 </script>
 
