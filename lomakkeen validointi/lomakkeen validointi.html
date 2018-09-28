@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lomakkeen validointi</title>
+    </head>
+<body>
+    <h1>Lomakkeen validointi</h1>
+    <p></p>
+    <h3>Siirry kentästä toiseen tab-näppäimellä</h3>
+    <p></p>
+        
+    <p>*Käyttäjä ID: <input type="text" id="kayttajaId" onblur="idTesti(this.value)"><span id="id-virhe"></span></p>
+        
+    <p>*Salasana: <input type="password" id="salasana"></p>
+        
+    <p>*Nimi: <input type="text" id="nimi" size="40"></p>
+       
+    <p>*Osoite: <input type="text" id="osoite" size="40"></p>
+        
+    <p>*Maa: <select id="maa"></p>
+        <option value="valitseMaa">(Valitse maa)</option>
+        <option value="suomi">Suomi</option>
+        <option value="ruotsi">Ruotsi</option>
+        <option value="englanti">Englanti</option>
+        <option value="viro">Viro</option>
+    </select>    
+        
+    <p>*Postinumero: <input type="text" id="postinumero" onblur="postinumeroTesti(this.value)"><span id="postinumero.virhe"></span></p>
+       
+    <p>*Sähköposti: <input type="text" id="sahkoposti" size="40" onblur="emailTesti(this.value)"><span id="email.virhe"></span></p>
+        
+    <p>*Sukupuoli: 
+        <input type="radio" name="sukupuoli" value="mies">Mies
+        <input type="radio" name="sukupuoli" value="nainen">Nainen
+        
+    <p>*Kieli: 
+        <input type="checkbox" name="kieli1" value="suomi">Suomi
+        <input type="checkbox" name="kieli2" value="muukuinSuomi">Muu kuin Suomi
+        
+    <p>Lisätietoja:</p><textarea name="lisatietoja" rows="10" cols="30"></textarea><br>
+            
+    <button type="button" onclick="laheta()">Lähetä</button>
+
+    <p id="demo"></p>
+
+<script>
+
+function laheta(){
+    
+    window.location.href = 'done.html';
+}
+
+function idTesti(id) {
+
+    if (id.length < 6) {
+        document.getElementById('id-virhe').innerHTML = "Liian lyhyt";
+    } else {
+        id.length > 6
+        document.getElementById('id-virhe').innerHTML = "OK";
+    }
+}
+    
+function postinumeroTesti(postinumero) {
+
+    var postinumero;
+
+   if (isNaN(postinumero) || postinumero.length < 5 || postinumero.length > 5) {
+       document.getElementById('postinumero.virhe').innerHTML = "Postinumero ei kelpaa";
+   } else {
+       isNaN(postinumero) || postinumero.length / 5;
+       document.getElementById('postinumero.virhe').innerHTML = "OK";
+   }
+}
+
+function validateEmail(email) {
+
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
+function emailTesti(email) {
+    
+    if (validateEmail(email)) {
+        document.getElementById('email.virhe').innerHTML = "OK";
+    } else {
+        document.getElementById('email.virhe').innerHTML = "Email epäkelpoinen";
+    }
+}
+
+</script>
+    
+    
+
+</body>
+</html>
