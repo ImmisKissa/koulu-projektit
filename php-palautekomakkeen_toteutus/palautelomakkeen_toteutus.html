@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Palautelomakkeen toteutus</title>
+</head>
+<body>
+    <h1>Palautelomakkeen toteutus</h1>
+    <p></p>
+
+    <p>Nimi: <input type="text" id="nimi" size="40"></p>
+    <p>Sähköposti: <input type="text" id="sahkoposti" size="40" onblur="emailTesti(this.value)"><span id="email.virhe"></span></p>
+    <p>Palaute:</p> <textarea name="palaute" rows="10" cols="30"></textarea><br>
+    <button type="button" onclick="laheta">Lähetä</button>
+
+<script>
+
+function validateEmail(email) {
+
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
+function emailTesti(email) {
+
+    if (validateEmail(email)) {
+        document.getElementById('email.virhe').innerHTML = "OK";
+    } else {
+        document.getElementById('email.virhe').innerHTML = "Email epäkelpoinen";
+    }
+}
+
+</script>
+</body>
+</html>
