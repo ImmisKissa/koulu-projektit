@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Oppimistehtävä 6</title>
+<style>
+    .koko_sivu {
+        text-align: center;
+        width: 1000px;
+        border: 3px solid blue;
+        box-shadow: 3px 3px 5px red;
+    }
+
+    @font-face {
+        font-family: mySecondFont;
+        src: url(Kansha.otf);
+    }
+
+    h1 {
+        font-family: mySecondFont;
+    }
+
+    .column {
+        float: left;
+        width: 45%;
+        padding: 15px;
+        text-align: justify;
+    }
+
+    .column::first-letter {
+        font-size: 25px;
+    }
+
+    .row::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .box {
+        border: 2px solid green;
+        margin: 15px
+    }
+</style>
+</head>
+<body>
+    <div class="koko_sivu">
+        <h1>Niko Immosen oma nettisivu</h1>
+            <li><a href="opiskelu.html">Opiskelu</a></li>
+            <li><a href="pelailu.html">Pelailu</a></li>
+            <li><a href="perhe.html">Perhe</a></li>
+            <li><a href="kouluprojektit.html">Kouluprojektit</a></li>
+        <br>
+    <div class="row">
+        <div class="column">
+            <p>Olen Niko Immonen 17v. ja opiskelen Esedulla. Tykkään pelata videopelejä
+            enimmäkseen pleikkarilla mutta pelaan myös koneellakin. Lempipelejäni
+            on Call of Duty: WWII, League of Legends, Battlefield 1 ja GTAV.</p>
+        </div>
+        <div class="column">
+            <p>Olen harrastanut jalkapalloa vajaan 9-vuotta ja judoa noin 1-vuoden
+            sekä tykkään pomppia trampoliinilla ja tehdä kaikenlaisia temppuja.
+            Vapaa-ajalla käyn kavereiden kanssa potkimassa palloa kesällä ja talvella
+            pelataan lätkää.</p>
+        </div>
+    </div>
+    <div class="box">
+    <p>Tämä sivu on siis ensimmäinen virallinen sivuni jonka toteutin niillä tiedoilla ja taidoilla ja toivon että tykkäätte
+    siitä, en ole mikään ammattilainen mutta taitoni riittivät tekemään tälläisen sivun. Jos hean TOP-paikkaa toivon
+    että vilkaisisitte tätä sivua.</p>
+    <p>Jos haluat lisätietoja minusta ja minun elämästäni niin klikkaa linkkejä ja lue sieltä!</p>
+    </div>
+    </div>
+</body>
+</html>
