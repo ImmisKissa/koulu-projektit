@@ -7,11 +7,13 @@
 <body>
     <h1>Palautelomakkeen toteutus</h1>
     <p></p>
-
-    <p>Nimi: <input type="text" id="nimi" size="40"></p>
-    <p>Sähköposti: <input type="text" id="sahkoposti" size="40" onblur="emailTesti(this.value)"><span id="email.virhe"></span></p>
-    <p>Palaute:</p> <textarea name="palaute" rows="10" cols="30"></textarea><br>
-    <button type="button" onclick="laheta">Lähetä</button>
+        <label for="nimi"></label>
+        <p>Nimi: <input type="text" name="nimi" size="40"></p>
+        <label for="sahkoposti"></label>
+        <p>Sähköposti: <input type="text" name="sahkoposti" size="40" onblur="emailTesti(this.value)"><span id="email.virhe"></span></p>
+        <label for="palaute"></label>
+        <p>Palaute:</p> <textarea name="palaute" rows="10" cols="30"></textarea><br>
+        <input type="submit" name="laheta" value="Lähetä">
 
 <script>
 
