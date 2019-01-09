@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+  <rivi>
+    <nimi>Veikka</nimi>
+    <sahkoposti>vaikka@gmail.com</sahkoposti>
+    <palaute>dyk</palaute>
+    <aika>2019-01-09T05:05</aika>
+  </rivi>
+  <rivi>
+    <nimi>niko</nimi>
+    <sahkoposti>niko@gmail.com</sahkoposti>
+    <palaute>juusto</palaute>
+    <aika>2019-01-09T11:30</aika>
+  </rivi>
+</data>

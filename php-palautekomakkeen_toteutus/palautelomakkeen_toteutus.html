@@ -6,15 +6,18 @@
 </head>
 <body>
     <h1>Palautelomakkeen toteutus</h1>
-    <p></p>
+    <form action="tallennaTiedot.php" method="post">
+        <p>*:Pakollinen!</p>
+        <label for="aika"></label>
+        <p>*Aika ja päivämäärä: <input type="datetime-local" name="aika"></p>
         <label for="nimi"></label>
-        <p>Nimi: <input type="text" name="nimi" size="40"></p>
+        <p>*Nimi: <input type="text" name="nimi" size="40"></p>
         <label for="sahkoposti"></label>
-        <p>Sähköposti: <input type="text" name="sahkoposti" size="40" onblur="emailTesti(this.value)"><span id="email.virhe"></span></p>
+        <p>*Sähköposti: <input type="text" name="sahkoposti" size="40" onblur="emailTesti(this.value)"><span id="email.virhe"></span></p>
         <label for="palaute"></label>
-        <p>Palaute:</p> <textarea name="palaute" rows="10" cols="30"></textarea><br>
+        <p>*Palaute: </p> <textarea name="palaute" rows="10" cols="30"></textarea><br>
         <input type="submit" name="laheta" value="Lähetä">
-
+    </form>
 <script>
 
 function validateEmail(email) {
